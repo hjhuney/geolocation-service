@@ -6,3 +6,8 @@ This web app is designed to take a street address as an input and return the lat
 localhost:5000/geolocator/1600 Pennsylvania Ave NW Washington DC 20500
 `
 
+This app also includes US state geodata from the US Census Bureau in JSON format at:
+
+`
+localhost:5000/geodata
+`

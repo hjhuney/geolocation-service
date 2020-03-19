@@ -25,7 +25,7 @@ def geodata():
 
 
 # user inputs address and gets geodata returned in JSON format
-@app.route('/<address>', methods=['GET'])
+@app.route('geolocator/<address>', methods=['GET'])
 def geolocator(address):
     g = geocoder.mapquest(address, key=MAPQUEST_KEY).json
 

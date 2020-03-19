@@ -18,6 +18,7 @@ def index():
 # returns json version of .shp file converted to postgresql database
 @app.route('/geodata')
 def geodata():
+    
     root = os.path.realpath(os.path.dirname(__file__))
     json_url = os.path.join(root, "", "state_geodata.json")
     data = json.load(open(json_url))
@@ -25,8 +26,9 @@ def geodata():
 
 
 # user inputs address and gets geodata returned in JSON format
-@app.route('geolocator/<address>', methods=['GET'])
+@app.route('/geolocator/<address>', methods=['GET'])
 def geolocator(address):
+
     g = geocoder.mapquest(address, key=MAPQUEST_KEY).json
 
     addy = g['address']
